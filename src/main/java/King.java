@@ -1,13 +1,22 @@
 class King {
 
     static int cutTrees(int n, int m) {
-        if (m < 0 || n < 0) {
-            throw new IllegalArgumentException("Wrong args! n: " + n + " < 0, and m: " + m + "< 0");
+        if (m < 0) {
+            throw new IllegalArgumentException("Wrong args! m: " + m + "< 0");
         }
 
-        if (m >= n || n >= 1000) {
-            throw new IllegalArgumentException("Wrong args! m: " + m + ">= n: " + n + ", OR n: " + n + " >= 1000");
+        if (n <= 0) {
+            throw new IllegalArgumentException("Wrong args! n: " + n + " < 0");
         }
+
+        if (n > 1000) {
+            throw new IllegalArgumentException("Wrong args! n: " + n + " >= 1000");
+        }
+
+        if (n <= m) {
+            throw new IllegalArgumentException("Wrong args! m: " + m + " >= n: " + n);
+        }
+
         int waysOfCutting = 0;
 
         switch (m) {

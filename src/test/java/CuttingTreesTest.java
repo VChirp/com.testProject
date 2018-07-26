@@ -13,10 +13,10 @@ public class CuttingTreesTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {5, 3, 4},
                 {5, 0, 1},
                 {5, 1, 5},
                 {5, 2, 10},
+                {5, 3, 4},
                 {5, 4, 2},
                 {6, 2, 15},
                 {6, 3, 6},
@@ -25,6 +25,7 @@ public class CuttingTreesTest {
                 {325, 30, 1661},
                 {637, 432, 206},
                 {900, 801, 100},
+                {1000,524,477}
         });
     }
 

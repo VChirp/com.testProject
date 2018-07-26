@@ -7,16 +7,20 @@ public class CuttingTreesWithWrongArgsTest {
     public ExpectedException expectedException = ExpectedException.none();
 
     @Test
-    public void negativesArgs() {
+    public void negativeArgs() {
         expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("Wrong args! n: -4 < 0, and m: -10< 0");
         King.cutTrees(-4, -10);
     }
 
     @Test
-    public void mBiggerThenM() {
+    public void negativeM() {
         expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("Wrong args! m: 10>= n: 5, OR n: 5 >= 1000");
+        King.cutTrees(5, -4);
+    }
+
+    @Test
+    public void mBiggerThenN() {
+        expectedException.expect(IllegalArgumentException.class);
         King.cutTrees(5, 10);
     }
 
